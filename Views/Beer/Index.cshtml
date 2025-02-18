@@ -1,0 +1,21 @@
+﻿@model List<Beer>
+
+<h1>Beers</h1>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Brand</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var beer in Model)
+		{
+			<tr>
+				<td>@Html.DisplayFor(m => beer.Name)</td>
+				<td>@Html.DisplayFor(m => beer.Brand.Name)</td>
+			</tr>
+		}
+		</tbody>
+	</table>
+
